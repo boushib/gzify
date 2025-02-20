@@ -21,11 +21,11 @@ pub fn compress_file(input_path: &str, output_path: &str, compression_lvl: u32) 
     let progress_bar = ProgressBar::new(file_size);
     progress_bar.set_style(
         ProgressStyle::default_bar()
-            .template("{spinner:.green} [{elapsed_precise}] {bar:40.cyan/blue} {bytes}/{total_bytes} ({eta})")
+            .template("{spinner:.green} [{elapsed_precise}] {bar:40.green/blue} {bytes}/{total_bytes} ({eta})")
             .expect("Failed to set progress bar style")
     );
 
-    let mut buffer = [0; 8192]; // Read in 8KB chunks
+    let mut buffer = [0; 8192];
     let mut total_read = 0;
 
     while let Ok(bytes_read) = input_reader.read(&mut buffer) {

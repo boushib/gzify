@@ -35,5 +35,5 @@ sudo mv target/release/gzify /usr/local/bin/
 
 Usage example
 ```
-gzify -c data.txt
+gzify -compress data.txt
 ```
