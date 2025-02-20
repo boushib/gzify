@@ -20,3 +20,20 @@ Example:
 ```
 cargo run -q -- --decompress data.txt.gz
 ```
+
+## Installation
+### MacOS
+Build the project
+```
+cargo build --release
+```
+
+Move the binary to a global path
+```
+sudo mv target/release/gzify /usr/local/bin/
+```
+
+Usage example
+```
+gzify -c data.txt
+```
